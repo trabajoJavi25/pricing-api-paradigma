@@ -5,7 +5,6 @@ import com.jrosroig.priceservice.domain.Price;
 import com.jrosroig.priceservice.generated.api.PricesApi;
 import com.jrosroig.priceservice.generated.dto.PriceResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
