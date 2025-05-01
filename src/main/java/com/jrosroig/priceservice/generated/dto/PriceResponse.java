@@ -1,21 +1,14 @@
-package com.jrosroig.priceservice.dto;
+package com.jrosroig.priceservice.generated.dto;
 
-import java.net.URI;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
 import java.time.OffsetDateTime;
+
+import jakarta.validation.Valid;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.lang.Nullable;
-import org.openapitools.jackson.nullable.JsonNullable;
-import java.time.OffsetDateTime;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import javax.annotation.processing.Generated;
 import io.swagger.v3.oas.annotations.media.Schema;
-
-
-import java.util.*;
-import javax.annotation.Generated;
 
 /**
  * PriceResponse
@@ -129,7 +122,7 @@ public class PriceResponse {
    * Get endDate
    * @return endDate
    */
-  @Valid 
+  @Valid
   @Schema(name = "endDate", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("endDate")
   public OffsetDateTime getEndDate() {

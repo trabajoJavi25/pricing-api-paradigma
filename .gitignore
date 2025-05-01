@@ -34,7 +34,6 @@ release.properties
 *.iml
 *.ipr
 *.iws
-out/
 
 # NetBeans
 nbproject/private/
