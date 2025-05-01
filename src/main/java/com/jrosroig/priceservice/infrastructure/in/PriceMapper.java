@@ -5,9 +5,6 @@ import org.mapstruct.Mapper;
 import com.jrosroig.priceservice.generated.dto.PriceResponse;
 import org.mapstruct.Mapping;
 
-import java.time.LocalDateTime;
-import java.time.OffsetDateTime;
-
 /**
  * MapStruct mapper to convert between Price domain model and PriceResponseDto.
  */
