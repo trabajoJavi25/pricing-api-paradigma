@@ -3,7 +3,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-package com.jrosroig.priceservice.api;
+package com.jrosroig.priceservice.generated.api;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import java.time.OffsetDateTime;

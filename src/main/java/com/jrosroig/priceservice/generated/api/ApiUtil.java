@@ -1,4 +1,4 @@
-package com.jrosroig.priceservice.api;
+package com.jrosroig.priceservice.generated.api;
 
 import org.springframework.web.context.request.NativeWebRequest;
 

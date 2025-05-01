@@ -1,4 +1,4 @@
-package com.jrosroig.priceservice.dto;
+package com.jrosroig.priceservice.generated.dto;
 
 import java.net.URI;
 import java.util.Objects;
