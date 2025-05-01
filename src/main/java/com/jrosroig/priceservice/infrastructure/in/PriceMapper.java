@@ -29,14 +29,4 @@ public interface PriceMapper {
     @Mapping(target = "endDate", expression = "java(price.getEndDate() != null ? price.getEndDate().atOffset(java.time.ZoneOffset.UTC) : null)")
     PriceResponse toDto(Price price);
 
-    /**
-     * Maps a LocalDateTime (domain) to an OffsetDateTime (DTO).
-     * Assumes UTC as the default offset since the domain model does not include timezone information.
-     *
-     * @param dateTime the LocalDateTime to convert
-     * @return the corresponding OffsetDateTime with UTC offset, or null if input is null
-     */
-    default OffsetDateTime map(LocalDateTime dateTime) {
-        return dateTime != null ? dateTime.atOffset(java.time.ZoneOffset.UTC) : null;
-    }
 }
