@@ -4,9 +4,6 @@ import com.jrosroig.priceservice.domain.Price;
 import org.mapstruct.Mapper;
 import com.jrosroig.priceservice.generated.dto.PriceResponse;
 import org.mapstruct.Mapping;
-import org.mapstruct.Named;
-
-import java.math.BigDecimal;
 
 /**
  * MapStruct mapper to convert between Price domain model and PriceResponseDto.
@@ -25,5 +22,7 @@ public interface PriceMapper {
             target = "price",
             expression = "java(price.getPrice() != null ? price.getPrice().doubleValue() : null)"
     )
+    @Mapping(target = "startDate", expression = "java(price.getStartDate() != null ? OffsetDateTime map(LocalDateTime price.getStartDate()) : null)")
+    @Mapping(target = "endDate", expression = "java(price.getEndDate() != null ? OffsetDateTime map(LocalDateTime price.getEndDate()) : null)")
     PriceResponse toDto(Price price);
 }
