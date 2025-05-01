@@ -18,7 +18,7 @@ import java.util.Optional;
  */
 @RestController
 @RequiredArgsConstructor
-public class PriceContoller implements PricesApi {
+public class PriceController implements PricesApi {
 
     private final FindPriceUseCase findPriceUseCase;
     private final PriceMapper priceMapper;
