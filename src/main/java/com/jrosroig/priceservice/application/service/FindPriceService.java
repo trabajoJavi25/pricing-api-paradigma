@@ -35,15 +35,8 @@ public class FindPriceService implements FindPriceUseCase {
      * @return the corresponding Price domain object
      */
     private Price mapToDomain(PriceEntity entity) {
-        return new Price(
-                entity.getPriceList(),
-                entity.getBrandId(),
-                entity.getProductId(),
-                entity.getStartDate(),
-                entity.getEndDate(),
-                entity.getPriority(),
-                entity.getPrice(),
-                entity.getCurrency()
-        );
+        return Price.builder().priceList(entity.getPriceList()).brandId(entity.getBrandId())
+                .productId(entity.getProductId()).startDate(entity.getStartDate()).endDate(entity.getEndDate())
+                .priority(entity.getPriority()).price(entity.getPrice()).currency(entity.getCurrency()).build();
     }
 }
