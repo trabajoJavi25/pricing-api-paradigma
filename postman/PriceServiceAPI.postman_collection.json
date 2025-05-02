@@ -1,0 +1,169 @@
+{
+  "info": {
+    "name": "PriceServiceAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Postman collection to test Price Service API with the 5 specified test cases."
+  },
+  "item": [
+    {
+      "name": "Test 1 - 2020-06-14T10:00:00",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-14T10:00:00",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "prices"
+          ],
+          "query": [
+            {
+              "key": "productId",
+              "value": "35455"
+            },
+            {
+              "key": "brandId",
+              "value": "1"
+            },
+            {
+              "key": "applicationDate",
+              "value": "2020-06-14T10:00:00"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Test 2 - 2020-06-14T16:00:00",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-14T16:00:00",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "prices"
+          ],
+          "query": [
+            {
+              "key": "productId",
+              "value": "35455"
+            },
+            {
+              "key": "brandId",
+              "value": "1"
+            },
+            {
+              "key": "applicationDate",
+              "value": "2020-06-14T16:00:00"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Test 3 - 2020-06-14T21:00:00",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-14T21:00:00",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "prices"
+          ],
+          "query": [
+            {
+              "key": "productId",
+              "value": "35455"
+            },
+            {
+              "key": "brandId",
+              "value": "1"
+            },
+            {
+              "key": "applicationDate",
+              "value": "2020-06-14T21:00:00"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Test 4 - 2020-06-15T10:00:00",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-15T10:00:00",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "prices"
+          ],
+          "query": [
+            {
+              "key": "productId",
+              "value": "35455"
+            },
+            {
+              "key": "brandId",
+              "value": "1"
+            },
+            {
+              "key": "applicationDate",
+              "value": "2020-06-15T10:00:00"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Test 5 - 2020-06-16T21:00:00",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-16T21:00:00",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "prices"
+          ],
+          "query": [
+            {
+              "key": "productId",
+              "value": "35455"
+            },
+            {
+              "key": "brandId",
+              "value": "1"
+            },
+            {
+              "key": "applicationDate",
+              "value": "2020-06-16T21:00:00"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
