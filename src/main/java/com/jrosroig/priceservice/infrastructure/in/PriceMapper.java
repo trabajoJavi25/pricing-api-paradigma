@@ -1,8 +1,8 @@
 package com.jrosroig.priceservice.infrastructure.in;
 
 import com.jrosroig.priceservice.domain.Price;
-import org.mapstruct.Mapper;
 import com.jrosroig.priceservice.generated.dto.PriceResponse;
+import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
@@ -24,6 +24,10 @@ public interface PriceMapper {
     )
     @Mapping(target = "startDate", expression = "java(price.getStartDate() != null ? price.getStartDate().atOffset(java.time.ZoneOffset.UTC) : null)")
     @Mapping(target = "endDate", expression = "java(price.getEndDate() != null ? price.getEndDate().atOffset(java.time.ZoneOffset.UTC) : null)")
+    @Mapping(target = "productId", expression = "java(price.getProductId())")
+    @Mapping(target = "brandId", expression = "java(price.getBrandId())")
+    @Mapping(target = "priceList", expression = "java(price.getPriceList())")
+    @Mapping(target = "currency", expression = "java(price.getCurrency())")
     PriceResponse toDto(Price price);
 
 }
