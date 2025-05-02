@@ -167,7 +167,7 @@ src/main/java
 │   │   │   └── out
 │   │   └── service
 │   ├── domain
-│   ├── adapter
+│   ├── infrastructure
 │   │   ├── in
 │   │   └── out
 │   └── generated (OpenAPI generated interfaces and DTOs)
