@@ -163,8 +163,7 @@ src/main/java
 ├── com.jrosroig.priceservice
 │   ├── application
 │   │   ├── port
-│   │   │   ├── in
-│   │   │   └── out
+│   │   ├── usecase
 │   │   └── service
 │   ├── domain
 │   ├── infrastructure
