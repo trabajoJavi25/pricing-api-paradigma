@@ -162,17 +162,14 @@ Import this collection into Postman to test the API endpoints.
 src/main/java
 ├── com.jrosroig.priceservice
 │   ├── application
+│   │   ├── port
 │   │   ├── usecase
-│   │   ├── service
-│   │   └── port
+│   │   └── service
 │   ├── domain
 │   ├── infrastructure
 │   │   ├── in
 │   │   └── out
 │   └── generated (OpenAPI generated interfaces and DTOs)
-src/generated/java
-├── com.jrosroig.priceservice.generated.api
-├── com.jrosroig.priceservice.generated.dto
 ```
 
 ---
