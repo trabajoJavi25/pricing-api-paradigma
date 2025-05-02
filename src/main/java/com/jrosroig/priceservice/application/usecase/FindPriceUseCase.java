@@ -1,4 +1,4 @@
-package com.jrosroig.priceservice.application.port.in;
+package com.jrosroig.priceservice.application.usecase;
 
 import com.jrosroig.priceservice.domain.Price;
 
@@ -15,8 +15,8 @@ public interface FindPriceUseCase {
      * Finds the applicable price for a given product, brand, and application date.
      *
      * @param applicationDate the date to apply the price
-     * @param productId the product identifier
-     * @param brandId the brand identifier
+     * @param productId       the product identifier
+     * @param brandId         the brand identifier
      * @return an Optional with the applicable Price, or empty if none found
      */
     Optional<Price> findPrice(LocalDateTime applicationDate, Long productId, Long brandId);

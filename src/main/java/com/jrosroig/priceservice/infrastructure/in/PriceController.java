@@ -1,6 +1,6 @@
 package com.jrosroig.priceservice.infrastructure.in;
 
-import com.jrosroig.priceservice.application.port.in.FindPriceUseCase;
+import com.jrosroig.priceservice.application.usecase.FindPriceUseCase;
 import com.jrosroig.priceservice.domain.Price;
 import com.jrosroig.priceservice.generated.api.PricesApi;
 import com.jrosroig.priceservice.generated.dto.PriceResponse;
@@ -29,7 +29,6 @@ public class PriceController implements PricesApi {
         LocalDateTime localDateTime = applicationDate.toLocalDateTime();
 
         Optional<Price> result = findPriceUseCase.findPrice(localDateTime, productId.longValue(), brandId.longValue());
-
 
         return result
                 .map(priceMapper::toDto)
