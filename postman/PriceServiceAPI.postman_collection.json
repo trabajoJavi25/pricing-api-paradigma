@@ -6,12 +6,12 @@
   },
   "item": [
     {
-      "name": "Test 1 - 2020-06-14T10:00:00",
+      "name": "Test 1 - 14th June 10:00",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-14T10:00:00",
+          "raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-14T10:00:00%2B00:00",
           "protocol": "http",
           "host": [
             "localhost"
@@ -31,19 +31,19 @@
             },
             {
               "key": "applicationDate",
-              "value": "2020-06-14T10:00:00"
+              "value": "2020-06-14T10:00:00%2B00:00"
             }
           ]
         }
       }
     },
     {
-      "name": "Test 2 - 2020-06-14T16:00:00",
+      "name": "Test 2 - 14th June 16:00",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-14T16:00:00",
+          "raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-14T16:00:00%2B00:00",
           "protocol": "http",
           "host": [
             "localhost"
@@ -63,19 +63,19 @@
             },
             {
               "key": "applicationDate",
-              "value": "2020-06-14T16:00:00"
+              "value": "2020-06-14T16:00:00%2B00:00"
             }
           ]
         }
       }
     },
     {
-      "name": "Test 3 - 2020-06-14T21:00:00",
+      "name": "Test 3 - 14th June 21:00",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-14T21:00:00",
+          "raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-14T21:00:00%2B00:00",
           "protocol": "http",
           "host": [
             "localhost"
@@ -95,19 +95,19 @@
             },
             {
               "key": "applicationDate",
-              "value": "2020-06-14T21:00:00"
+              "value": "2020-06-14T21:00:00%2B00:00"
             }
           ]
         }
       }
     },
     {
-      "name": "Test 4 - 2020-06-15T10:00:00",
+      "name": "Test 4 - 15th June 10:00",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-15T10:00:00",
+          "raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-15T10:00:00%2B00:00",
           "protocol": "http",
           "host": [
             "localhost"
@@ -127,19 +127,19 @@
             },
             {
               "key": "applicationDate",
-              "value": "2020-06-15T10:00:00"
+              "value": "2020-06-15T10:00:00%2B00:00"
             }
           ]
         }
       }
     },
     {
-      "name": "Test 5 - 2020-06-16T21:00:00",
+      "name": "Test 5 - 16th June 21:00",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-16T21:00:00",
+          "raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-16T21:00:00%2B00:00",
           "protocol": "http",
           "host": [
             "localhost"
@@ -159,7 +159,7 @@
             },
             {
               "key": "applicationDate",
-              "value": "2020-06-16T21:00:00"
+              "value": "2020-06-16T21:00:00%2B00:00"
             }
           ]
         }
