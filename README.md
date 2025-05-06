@@ -3,6 +3,55 @@
 This project implements a REST API to query product pricing information based on product ID, brand ID, and application
 date.
 
+---
+
+## 📝 Design Decisions
+
+✅ API First approach using OpenAPI Generator for interfaces and DTOs  
+✅ Generated code stored under `src/generated/java` to avoid regeneration at build time  
+✅ `build-helper-maven-plugin` configured to add generated sources to Maven build path  
+✅ MapStruct used for mapping between domain and DTOs, with explicit `@Mapping(expression = "...")` for builder-style
+DTOs  
+✅ Clean Architecture principles: `application.usecase`, `application.service`, `application.port`, `infrastructure.in`,
+`infrastructure.out`  
+✅ Dockerized using multi-stage build for optimized image size  
+✅ Static OpenAPI-generated code ensures reproducibility
+
+---
+
+## 🏁 Project Structure
+
+```
+src/main/java
+├── com.jrosroig.priceservice
+│   ├── application
+│   │   ├── port
+│   │   ├── usecase
+│   │   └── service
+│   ├── domain
+│   ├── infrastructure
+│   │   ├── in
+│   │   └── out
+│   └── generated (OpenAPI generated interfaces and DTOs)
+```
+
+---
+
+## 🗄️ API Contract
+
+The API was designed using an **API First** approach with OpenAPI 3.0.3.  
+The OpenAPI contract file is located at:
+
+`src/main/resources/openapi/openapi.yml`
+
+API interfaces and DTOs were generated using **OpenAPI Generator CLI** and stored under:
+
+`src/generated/java`
+
+Maven is configured with `build-helper-maven-plugin` to include this folder as a source directory.
+
+---
+
 ## 📐 Overview
 
 The API receives:
@@ -34,21 +83,6 @@ overlap.
 - H2 in-memory database
 - JUnit 5 + Mockito
 - Docker
-
----
-
-## 🗄️ API Contract
-
-The API was designed using an **API First** approach with OpenAPI 3.0.3.  
-The OpenAPI contract file is located at:
-
-`src/main/resources/openapi/openapi.yml`
-
-API interfaces and DTOs were generated using **OpenAPI Generator CLI** and stored under:
-
-`src/generated/java`
-
-Maven is configured with `build-helper-maven-plugin` to include this folder as a source directory.
 
 ---
 
@@ -132,20 +166,6 @@ Example response:
 
 ---
 
-## 📝 Design Decisions
-
-✅ API First approach using OpenAPI Generator for interfaces and DTOs  
-✅ Generated code stored under `src/generated/java` to avoid regeneration at build time  
-✅ `build-helper-maven-plugin` configured to add generated sources to Maven build path  
-✅ MapStruct used for mapping between domain and DTOs, with explicit `@Mapping(expression = "...")` for builder-style
-DTOs  
-✅ Clean Architecture principles: `application.usecase`, `application.service`, `application.port`, `infrastructure.in`,
-`infrastructure.out`  
-✅ Dockerized using multi-stage build for optimized image size  
-✅ Static OpenAPI-generated code ensures reproducibility
-
----
-
 ## 📨 Postman Collection
 
 A Postman collection with the 5 test requests is included at:
@@ -156,21 +176,18 @@ Import this collection into Postman to test the API endpoints.
 
 ---
 
-## 🏁 Project Structure
+## 🔑 H2 Console Access
 
-```
-src/main/java
-├── com.jrosroig.priceservice
-│   ├── application
-│   │   ├── port
-│   │   ├── usecase
-│   │   └── service
-│   ├── domain
-│   ├── infrastructure
-│   │   ├── in
-│   │   └── out
-│   └── generated (OpenAPI generated interfaces and DTOs)
-```
+The application uses an embedded H2 database with the following configuration:
+
+- **URL:** [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+- **JDBC URL:** `jdbc:h2:mem:testdb`
+- **Username:** `sa`
+- **Password:** *(empty)*
+
+> ✅ **Remote connections to the H2 console are already enabled in `application.properties`.**  
+> You can access the H2 console remotely (e.g., from your browser while the app runs in Docker) without further
+> configuration.
 
 ---
 
