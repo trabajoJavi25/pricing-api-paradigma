@@ -151,6 +151,7 @@ Example request:
 GET /prices?productId=35455&brandId=1&applicationDate=2020-06-14T16:00:00%2B00:00
 ```
 
+> **Note:** The `applicationDate` parameter includes a `+` character in the date-time format, which is URL-encoded as `%2B`. URL encoding ensures that special characters are transmitted correctly in the query string.
 Example response:
 
 ```json
