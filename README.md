@@ -177,7 +177,7 @@ Import this collection into Postman to test the API endpoints.
 
 ---
 
-## 🔑 H2 Console Access
+## 🔑 H2 Console Configuration
 
 The application uses an embedded H2 database with the following configuration:
 
