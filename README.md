@@ -7,15 +7,18 @@ date.
 
 ## 📝 Design Decisions
 
-✅ API First approach using OpenAPI Generator for interfaces and DTOs  
+✅ API First approach using OpenAPI Generator for interfaces and DTO  
 ✅ Generated code stored under `src/generated/java` to avoid regeneration at build time  
 ✅ `build-helper-maven-plugin` configured to add generated sources to Maven build path  
-✅ MapStruct used for mapping between domain and DTOs, with explicit `@Mapping(expression = "...")` for builder-style
-DTOs  
-✅ Clean Architecture principles: `application.usecase`, `application.service`, `application.port`, `infrastructure.in`,
-`infrastructure.out`  
-✅ Dockerized using multi-stage build for optimized image size  
-✅ Static OpenAPI-generated code ensures reproducibility
+✅ MapStruct used for mapping between domain and DTO, with explicit `@Mapping(expression = "...")` for DTO
+✅ **The project follows Hexagonal Architecture (Ports and Adapters):**
+
+- `application.port` defines input/output ports
+- `application.usecase` implements business logic
+- `infrastructure.in` contains adapters/controllers (REST)
+- `infrastructure.out` contains adapters/repositories (database access)  
+  ✅ Dockerized using multi-stage build for optimized image size
+  ✅ Static OpenAPI-generated code ensures reproducibility
 
 ---
 
@@ -120,8 +123,6 @@ Run the Docker container:
 docker run -p 8080:8080 price-service
 ```
 
-Access the application at [http://localhost:8080](http://localhost:8080)
-
 ---
 
 ## 🧪 Testing
@@ -147,7 +148,7 @@ Query price by `productId`, `brandId`, and `applicationDate`.
 Example request:
 
 ```http
-GET /prices?productId=35455&brandId=1&applicationDate=2020-06-14T16:00:00
+GET /prices?productId=35455&brandId=1&applicationDate=2020-06-14T16:00:00%2B00:00
 ```
 
 Example response:
