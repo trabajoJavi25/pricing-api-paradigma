@@ -10,15 +10,15 @@ date.
 ✅ API First approach using OpenAPI Generator for interfaces and DTO  
 ✅ Generated code stored under `src/generated/java` to avoid regeneration at build time  
 ✅ `build-helper-maven-plugin` configured to add generated sources to Maven build path  
-✅ MapStruct used for mapping between domain and DTO, with explicit `@Mapping(expression = "...")` for DTO
+✅ MapStruct used for mapping between domain and DTO, with explicit `@Mapping(expression = "...")` for DTO  
+✅ Dockerized using multi-stage build for optimized image size  
+✅ Static OpenAPI-generated code ensures reproducibility  
 ✅ **The project follows Hexagonal Architecture (Ports and Adapters):**
 
 - `application.port` defines input/output ports
 - `application.usecase` implements business logic
 - `infrastructure.in` contains adapters/controllers (REST)
-- `infrastructure.out` contains adapters/repositories (database access)  
-  ✅ Dockerized using multi-stage build for optimized image size
-  ✅ Static OpenAPI-generated code ensures reproducibility
+- `infrastructure.out` contains adapters/repositories (database access)
 
 ---
 
@@ -188,8 +188,10 @@ The application uses an embedded H2 database with the following configuration:
 
 > ✅ **Remote connections to the H2 console are already enabled in `application.properties`.**  
 > You can access the H2 console remotely (e.g., from your browser while the app runs in Docker) without further
-> configuration.
-
+> configuration.  
+> ⚠️ **Security Note:** Enabling remote access to the H2 console can pose significant security risks in production
+> environments. It is strongly recommended to disable remote access or secure it with proper authentication and
+> network restrictions.
 ---
 
 ## 🙌 Notes
